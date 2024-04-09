@@ -6,55 +6,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <title>Netflix</title>
+    <link rel="stylesheet" href="netflix.css">
+    <title>Survey Form_Netflix</title>
 
   
 </head>
 <body>
     <div class="saydamlik">
+        <header class="header">
     <h1>NET<span class="baslik">FLIX</span></h1>
-    <p>Thank you for signing up at Netflix. Tell us more about your self</p>
-   
+    <p id="description">Thank you for signing up at Netflix. Tell us more about your self</p>
+   </header>
+
+   <main class="form-container">
+    <form action="result.html">
     <div class="container">
         <label for="isim">Name</label><br> 
-        <input type="text" id="isim" placeholder="Enter your name">
+        <input name="Isim" type="text" id="isim" placeholder="Enter your name">
         <br><br>
         <label for="yas">Age</label><br>
-        <input type="text" id="yas" placeholder="Enter your age">
+        <input name="Yas" type="text" id="yas" placeholder="Enter your age">
         <br><br>
         <label for="mail">Email</label><br>
-        <input type="text" id="mail" placeholder="Enter your mail">
+        <input name="Email" type="text" id="mail" placeholder="Enter your mail">
         <br><br>
         <label for="type">Content type</label><br>
-        <select name="Series" id="type" placeholder="Series"></select>
+        <select name="Content" id="type" placeholder="Series">
+            <option value="movie">Movie</option>
+            <option value="series" selected>Series</option>
+        </select>
         <br><br>
         <label for="move">Move type</label><br>
-        <input type="checkbox" id="move">
-        <label for="move">Comedy</label><br>
-        <input type="checkbox" id="move">
-        <label for="move">Action</label><br>
-        <input type="checkbox" id="move">
-        <label for="move">Romance</label><br>
+        <input type="checkbox" name="Movie Type" id="comedy" value="Comedy">
+        <label for="comedy">Comedy</label><br>
+        <input type="checkbox" name="Movie Type" id="action" value="action">
+        <label for="action">Action</label><br>
+        <input type="checkbox" name="Movie Type" id="romance" value="romance">
+        <label for="romance">Romance</label><br>
 
         <br> 
         <label for="gender">Gender</label><br>
-        <input type="radio" id="gender">
+        <input type="radio" name="Gender" id="gender" value="Male">
         <label for="gender">Male</label><br>
-        <input type="radio" id="gender">
+        <input type="radio" name="Gender" id="gender" value="Female">
         <label for="gender">Female</label><br>
-        <input type="radio" id="gender">
+        <input type="radio" name="Gender" id="gender" value="Other">
         <label for="gender">Other</label><br>
         <br>
 
-        <label for="feedback">Feed back</label><br>
-        <textarea type="text" id="feedback" placeholder="Any comment"></textarea>
+        <label for="feedback">Feedback</label><br>
+        <textarea type="text" name="feedback" id="feedback" placeholder="Any comment"></textarea>
         <br><br>
 
         <div class="submit_btn">
-        <button type="submit" id="submit">Submit</button>
+        <button type="submit" value="Send" id="submit">Submit</button>
         </div>
     </div>
+    </form>
+</main>
 </div>
 </body>
 </html>
